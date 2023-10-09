@@ -1,0 +1,37 @@
+<script src="coffee-data.js"></script>
+<script>
+    const main = document.querySelector('main');
+
+    // Function to create a coffee item card
+    function createCoffeeCard(coffee) {
+        const card = document.createElement('div');
+        card.classList.add('coffee-item');
+
+        const img = document.createElement('img');
+        img.src = coffee.image;
+        img.alt = coffee.title;
+
+        const title = document.createElement('h2');
+        title.textContent = coffee.title;
+
+        const description = document.createElement('p');
+        description.textContent = coffee.description;
+
+        const ingredients = document.createElement('p');
+        ingredients.textContent = `Ingredients: ${coffee.ingredients.join(', ')}`;
+
+        card.appendChild(img);
+        card.appendChild(title);
+        card.appendChild(description);
+        card.appendChild(ingredients);
+
+        return card;
+    }
+
+    // Filter iced coffee items and create coffee cards
+    const icedCoffeeData = coffeeData.filter(coffee => coffee.title.includes('Iced'));
+    icedCoffeeData.forEach(coffee => {
+        const card = createCoffeeCard(coffee);
+        main.appendChild(card);
+    });
+</script>

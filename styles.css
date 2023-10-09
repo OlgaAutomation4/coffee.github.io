@@ -1,0 +1,117 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffebcd;
+    /* Very, very light brown-pink cream color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Ensure the container spans the full viewport height */
+}
+
+.header {
+    text-align: center;
+    background-image: url('your-background-image.jpg');
+    /* Add the URL of your background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+.header-title {
+    font-family: 'Patrick Hand SC', cursive;
+    /* Use the Patrick Hand SC Google Font for the title */
+    font-size: 5rem;
+    /* Twice as big as the original size (adjust as needed) */
+    margin: 0;
+    color: #a0522d;
+    /* Bright coffee color */
+}
+
+.navigation {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.btn {
+    background-color: #5f4b3a;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    /* Smooth hover transition */
+}
+
+.btn:hover {
+    background-color: #7b5c47;
+}
+
+.coffee-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+    /* Add transform transition for the pop-up effect */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Scale the card slightly on hover */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+.coffee-quote {
+    font-family: 'Dancing Script', cursive;
+    /* Use the Dancing Script Google Font for the quote */
+    font-size: 2.25rem;
+    /* Two times smaller than the previous size */
+    margin-top: 1rem;
+    /* Add some spacing between the buttons and the quote */
+    color: #7b5c47;
+    /* A warm and coffee-like color */
+}
+
+.loading-indicator {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    display: none;
+    /* Hide by default */
+}
